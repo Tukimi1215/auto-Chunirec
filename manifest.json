@@ -1,0 +1,46 @@
+{
+  "name": "Chunirecのスコア更新自動化",
+  "version": "1.0",
+  "description": "この拡張は、Chunirecのスコア更新を自動化してくれます。",
+  "browser_action": {
+    "default_icon": {
+      "16": "images/n_icon16.png",
+      "32": "images/n_icon32.png",
+      "48": "images/n_icon48.png",
+      "128": "images/n_icon128.png"
+    }
+  },
+  "icons": {
+    "16": "images/n_icon16.png",
+    "32": "images/n_icon32.png",
+    "48": "images/n_icon48.png",
+    "128": "images/n_icon128.png"
+  },
+  "background": {
+    "scripts": [
+      "background.js"
+    ],
+    "persistent": false
+  },
+  "permissions": [
+    "activeTab"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "https://new.chunithm-net.com/chuni-mobile/html/mobile/home/"
+      ],
+      "js": [
+        "jquery-3.4.1.min.js",
+        "jquery-3.6.0.min.js",
+        "modaal.min.js",
+        "jquery-cookie.js",
+        "Load-program.js"
+      ],
+      "css": [
+        "background.css"
+      ]
+    }
+  ],
+  "manifest_version": 2
+}
